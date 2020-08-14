@@ -1,0 +1,12 @@
+
+RewriteEngine on  
+  
+RewriteRule ^cupcake  index.php [NC,L]
+RewriteRule ^CONTACT  contact.php [NC,L]
+RewriteRule ^PRODUCT  product.php [NC,L] 
+
+
+RewriteRule ^IMAGE/([a-zA-Z0-9\-=&_@\.\,\)\(]*)/([a-zA-Z0-9\-=&_@\.\,\)\(]*)/([a-zA-Z0-9\-=&_@\.\,\)\(]*)$ /image_folder/image.php?param1=$1&param2=$2&param3=$3 [NC,L]
+RewriteRule ^IMAGE/([a-zA-Z0-9\-=&_@\.\,\)\(]*)/([a-zA-Z0-9\-=&_@\.\,\)\(]*)$ /image_folder/image.php?param1=$1&param2=$2 [NC,L]
+RewriteRule ^IMAGE/([a-zA-Z0-9\-=&_@\.\,\)\(]*)$ /image_folder/image.php?param1=$1 [NC,L]
+RewriteRule ^IMAGE image_folder/image.php [NC,L]
